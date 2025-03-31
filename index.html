@@ -9,9 +9,29 @@
       const myCanvas = document.createElement("canvas");
       document.body.appendChild(myCanvas);
       myCanvas.style.backgroundColor = "red";
-      
+
       myCanvas.width = size;
       myCanvas.height = size;
+
+      const rad = size * 0.2;
+
+      const ctx = myCanvas.getContext("2d");
+
+      ctx.beginPath();
+      ctx.arc(rad, rad, rad, 0, 2 * Math.PI);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(size - rad, rad, rad, 0, 2 * Math.PI);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(size - rad, size - rad, rad, 0, 2 * Math.PI);
+      ctx.fill();
+
+      ctx.beginPath();
+      ctx.arc(rad, size - rad, rad, 0, 2 * Math.PI);
+      ctx.fill();
     </script>
   </body>
 </html>
